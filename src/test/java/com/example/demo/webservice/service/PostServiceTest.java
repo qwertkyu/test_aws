@@ -31,7 +31,7 @@ public class PostServiceTest {
 	}
 	
 	@Test
-	public void Dto데이터가_posts테이블에_저장된다 () {
+	public void Dtodata_save () {
 		PostsSaveRequestDto dto = PostsSaveRequestDto.builder()
 				.author("spbot")
 				.content("test")

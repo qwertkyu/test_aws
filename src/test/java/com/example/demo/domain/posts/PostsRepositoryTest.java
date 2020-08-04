@@ -31,11 +31,11 @@ public class PostsRepositoryTest {
 	}
 	
 	@Test
-	public void 게시글저장_불러오기() {
+	public void test1() {
 		//given
 		postsRepository.save(Posts.builder()
-				.title("테스트 게시글")
-				.content("테스트 본문")
+				.title("test1_title")
+				.content("test1_content")
 				.author("spboy93@naver.com")
 				.build());
 		
@@ -43,17 +43,17 @@ public class PostsRepositoryTest {
 		List<Posts> postsList = postsRepository.findAll();
 		
 		Posts posts = postsList.get(0);
-		assertThat(posts.getTitle(), is("테스트 게시글"));
-		assertThat(posts.getContent(), is("테스트 본문"));
+		assertThat(posts.getTitle(), is("test_title"));
+		assertThat(posts.getContent(), is("test_content"));
 	}
 	
 	@Test
-	public void BaseTimeEntity_등록() {
+	public void BaseTimeEntity_Register() {
 		//given
 		LocalDateTime now = LocalDateTime.now();
 		postsRepository.save(Posts.builder()
 				.title("test write")
-				.content("테스트본문")
+				.content("BaseTimeEntity_test_content")
 				.author("spboy93")
 				.build());
 		
