@@ -1,8 +1,8 @@
 buildscript{
 	dependencies{
 		classpath "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
-		testCompile 'junit:junit:4.12'
-    	compile 'junit:junit:4.12'
+		//testCompile 'junit:junit:4.12'
+    	//compile 'junit:junit:4.12'
 	}
 }
 
